@@ -1,13 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "fa4e1ade-f087-488b-822f-0d85ad4a1e9b",
-    "defaultCollection": "@angular-eslint/schematics"
+    "analytics": false
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "store-components": {
+    "angular-modal-example": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/store-components",
+            "outputPath": "dist/angular-modal-example",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -76,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "store-components:build:production"
+              "browserTarget": "angular-modal-example:build:production"
             },
             "development": {
-              "browserTarget": "store-components:build:development"
+              "browserTarget": "angular-modal-example:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "store-components:build"
+            "browserTarget": "angular-modal-example:build"
           }
         },
         "test": {
@@ -107,18 +106,9 @@
             ],
             "scripts": []
           }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
-          }
         }
       }
     }
   },
-  "defaultProject": "store-components"
+  "defaultProject": "angular-modal-example"
 }
